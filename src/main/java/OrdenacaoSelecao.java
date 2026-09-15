@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class OrdenacaoSelecao {
 
     public static int buscarMenor(int[] arr, int inicio){
@@ -14,7 +16,7 @@ public class OrdenacaoSelecao {
         return menorIndice;
     }
 
-    public static int[] ordernacaoPorSelecao(int[] arr){
+    public static int[] ordenacaoPorSelecao(int[] arr){
         int[] novoArr = new int[arr.length];
 
         for(int i = 0; i < arr.length; i++){
@@ -33,10 +35,12 @@ public class OrdenacaoSelecao {
         return novoArr;
     }
 
-
-
-
    public static void main(String[] args) {
 
+       int[] meuArray = {5, 3, 6, 2, 10};
+
+       int[] arrayOrdenado = ordenacaoPorSelecao(meuArray);
+
+       System.out.println(Arrays.toString(arrayOrdenado));
     }
 }
