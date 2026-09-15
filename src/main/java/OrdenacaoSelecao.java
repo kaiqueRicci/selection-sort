@@ -14,6 +14,25 @@ public class OrdenacaoSelecao {
         return menorIndice;
     }
 
+    public static int[] ordernacaoPorSelecao(int[] arr){
+        int[] novoArr = new int[arr.length];
+
+        for(int i = 0; i < arr.length; i++){
+            novoArr[i] = arr[i];
+
+        }
+
+        for(int i = 0; i < novoArr.length - 1; i++){
+            int menorIndice = buscarMenor(novoArr, i);
+
+            int auxiliar = novoArr[i];
+            novoArr[i] = novoArr[menorIndice];
+            novoArr[menorIndice] = auxiliar;
+        }
+
+        return novoArr;
+    }
+
 
 
 
